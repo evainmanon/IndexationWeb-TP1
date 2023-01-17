@@ -7,6 +7,7 @@ import requests
 import itertools
 
 
+
 #Fonction qui récupère la liste des liens accessibles dans une page
 def recuperer_liens(url):
 
@@ -62,11 +63,18 @@ def crawler(url, nb_site):
     #La fonction renvoie la liste des liens qui a été parcourue par le crawler
     return liste_lien_parcouru
 
+
+
 #Fonction qui crée le fichier .txt
 def creation_fichier(url, nb_site):
+
+    #On utilise la fonction crawler afin de déterminer la liste des liens qui ont été visités 
     liste_lien = crawler(url, nb_site)
+
+    #Création du fichier .txt contenant l'ensemble des url des sites visités par le crawler. On saute une ligne entre chaque url (\n). 
     file = open("crawled_webpages.txt", "w") 
     for lien in liste_lien : 
         file.write(lien + "\n") 
     file.close()
+
     return None
