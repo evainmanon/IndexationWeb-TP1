@@ -1,4 +1,4 @@
-#On importe les données présentes dans le fichier fonctions.py
+#On importe les données présentes dans le fichier fonction.py
 import fonction
 
 #Définition des paramètres
